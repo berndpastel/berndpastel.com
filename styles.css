@@ -51,7 +51,7 @@ a {
 }
 
 a:hover {
-  border-bottom-color: var(--accent);
+  border-bottom-color: var(--black);
 }
 
 .container {
@@ -93,7 +93,7 @@ nav {
 }
 
 nav a[aria-current="page"] {
-  border-bottom-color: var(--accent);
+  border-bottom-color: var(--black);
 }
 
 .lang-switch {
