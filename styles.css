@@ -66,12 +66,13 @@ header a {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .nav-logo {
   height: 32px;
   width: auto;
+  max-width: 360px;
   display: block;
 }
 
@@ -80,8 +81,10 @@ header a {
 }
 nav {
   display: flex;
+  margin-left: auto;
+  justify-content: flex-end;
   gap: 18px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   font-family: "Cal Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.95rem;
   letter-spacing: 0.08em;
@@ -201,6 +204,20 @@ h3 {
 .price-list div:nth-child(2n) {
   text-align: right;
   font-weight: 600;
+}
+
+
+.price-divider {
+  grid-column: 1 / -1;
+  border: 0;
+  border-top: 1px solid var(--black);
+  margin: 6px 0 2px;
+}
+
+.section-divider {
+  border: 0;
+  border-top: 3px solid var(--black);
+  margin: 18px 0 6px;
 }
 .service-card {
   padding: 0;
