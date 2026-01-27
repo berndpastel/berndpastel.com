@@ -31,15 +31,7 @@ body {
   margin: 0;
   font-family: "Cal Sans", "Helvetica Neue", Arial, sans-serif;
   color: var(--ink);
-  background: conic-gradient(
-    from 249deg at 50% 50%,
-    #ffc0cb 0deg,
-    #fa8072 61.875deg,
-    #f5f592 122.40000128746033deg,
-    #96d996 174.6000051498413deg,
-    #a7d5ff 232.19999313354492deg,
-    #cd89e4 293.3999991416931deg,
-    #ffc0cb 360deg
+  background: white
   );
   line-height: 1.6;
 }
