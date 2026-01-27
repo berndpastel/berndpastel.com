@@ -84,7 +84,8 @@ header a {
 }
 nav {
   display: flex;
-  margin-left: auto;
+  width: 100%;
+  align-items: center;
   justify-content: flex-end;
   gap: 18px;
   flex-wrap: nowrap;
@@ -312,16 +313,22 @@ h3 {
 
 .home-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
 .home-grid img {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 14px;
   border: 1px solid var(--ink);
+}
+
+@media (max-width: 900px) {
+  .home-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 .scatter-photos {
   position: relative;
