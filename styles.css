@@ -1,3 +1,11 @@
+.nav-logo-link {
+  border-bottom: none !important;
+}
+
+.nav-logo-link:hover {
+  border-bottom: none !important;
+}
+
 :root {
   color-scheme: light;
   --black: #000000;
