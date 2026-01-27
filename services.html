@@ -51,9 +51,6 @@
               <span data-lang="en" hidden>Contact</span>
             </a>
           </nav>
-          <div class="lang-switch" aria-label="Language switch">
-            <button type="button" class="lang-toggle" onclick="toggleLang()">DE / EN</button>
-          </div>
         </div>
       </header>
 
@@ -61,6 +58,33 @@
 
       <main>
         <section>
+
+			          <p>
+            <span data-lang="de">
+              Alle Nail-Sets beinhalten eine Russian Manicure mit sanfter
+              Nagelhautpflege, gründlicher Reinigung, präzisem Formen und glatter
+              Vorbereitung für ein langes, sauberes Finish.
+            </span>
+            <span data-lang="en" hidden>
+              All nail sets come with a Russian Manicure including gentle cuticle
+              care, thorough cleansing, precise shaping, and smooth prep for a
+              long-lasting, clean finish.
+            </span>
+          </p>
+
+		          <section>
+          <p>
+            <span data-lang="de">
+              Jedes Set ist eine Zusammenarbeit zwischen dir und mir. Schreib mir
+              <a href="contact.html">hier</a>, um deine neuen Nägel zu planen.
+            </span>
+            <span data-lang="en" hidden>
+              Every set is a collaboration between me and you. Get in touch
+              <a href="contact.html">here</a> to plan your new nails.
+            </span>
+          </p>
+        </section>
+
           <div class="services-grid">
             <article class="service-card">
               <img src="images/nails/nail-07.jpg" alt="Gel-X extensions" />
@@ -148,7 +172,7 @@
             <article class="service-card">
               <img src="images/nails/custom-painted.jpg" alt="Custom painted nail designs" />
               <h3>
-                <span data-lang="de">Individuelle Designs</span>
+                <span data-lang="de">Handbemalt Designs</span>
                 <span data-lang="en" hidden>Custom painted designs</span>
               </h3>
               <p>
@@ -262,56 +286,9 @@
               </p>
             </article>
           </div>
-          <p>
-            <span data-lang="de">
-              Alle Nail-Sets beinhalten eine Russian Manicure mit sanfter
-              Nagelhautpflege, gründlicher Reinigung, präzisem Formen und glatter
-              Vorbereitung für ein langes, sauberes Finish.
-            </span>
-            <span data-lang="en" hidden>
-              All nail sets come with a Russian Manicure including gentle cuticle
-              care, thorough cleansing, precise shaping, and smooth prep for a
-              long-lasting, clean finish.
-            </span>
-          </p>
         </section>
 
-        <section>
-          <p>
-            <span data-lang="de">
-              Jedes Set ist eine Zusammenarbeit zwischen dir und mir. Schreib mir
-              <a href="contact.html">hier</a>, um deine neuen Nägel zu planen.
-            </span>
-            <span data-lang="en" hidden>
-              Every set is a collaboration between me and you. Get in touch
-              <a href="contact.html">here</a> to plan your new nails.
-            </span>
-          </p>
-        </section>
       </main>
-
-      <footer>
-        <div>
-          <span data-lang="de">Bernd Pastel · Berlin-Neukölln</span>
-          <span data-lang="en" hidden>Bernd Pastel · Berlin-Neukölln</span>
-        </div>
-      </footer>
     </div>
-      <script>
-      function setLanguage(lang) {
-        document.documentElement.lang = lang;
-        document.querySelectorAll("[data-lang]").forEach((el) => {
-          const hide = el.dataset.lang !== lang;
-          el.hidden = hide;
-          el.style.display = hide ? "none" : "";
-        });
-      }
-      function toggleLang() {
-        const current = document.documentElement.lang || "de";
-        const next = current === "de" ? "en" : "de";
-        setLanguage(next);
-      }
-      setLanguage(document.documentElement.lang || "de");
-    </script>
 </body>
 </html>

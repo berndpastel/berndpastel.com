@@ -51,9 +51,6 @@
               <span data-lang="en" hidden>Contact</span>
             </a>
           </nav>
-          <div class="lang-switch" aria-label="Language switch">
-            <button type="button" class="lang-toggle" onclick="toggleLang()">DE / EN</button>
-          </div>
         </div>
       </header>
 
@@ -90,29 +87,6 @@
           </div>
         </section>
       </main>
-
-      <footer>
-        <div>
-          <span data-lang="de">Bernd Pastel · Berlin-Neukölln</span>
-          <span data-lang="en" hidden>Bernd Pastel · Berlin-Neukölln</span>
-        </div>
-      </footer>
     </div>
-      <script>
-      function setLanguage(lang) {
-        document.documentElement.lang = lang;
-        document.querySelectorAll("[data-lang]").forEach((el) => {
-          const hide = el.dataset.lang !== lang;
-          el.hidden = hide;
-          el.style.display = hide ? "none" : "";
-        });
-      }
-      function toggleLang() {
-        const current = document.documentElement.lang || "de";
-        const next = current === "de" ? "en" : "de";
-        setLanguage(next);
-      }
-      setLanguage(document.documentElement.lang || "de");
-    </script>
 </body>
 </html>

@@ -51,19 +51,13 @@
               <span data-lang="en" hidden>Contact</span>
             </a>
           </nav>
-          <div class="lang-switch" aria-label="Language switch">
-            <button type="button" class="lang-toggle" onclick="toggleLang()">DE / EN</button>
-          </div>
         </div>
       </header>
 
       <main>
         <div class="location-grid">
           <section>
-            <h2>
-              <span data-lang="de">Studio</span>
-              <span data-lang="en" hidden>Studio</span>
-            </h2>
+
             <p>
               <span data-lang="de">
                 Bernd Pastel ist in einem gemütlichen Home-Studio in Neukölln.
@@ -83,10 +77,7 @@
           </section>
 
           <section>
-            <h2>
-              <span data-lang="de">Finde mich</span>
-              <span data-lang="en" hidden>Find me</span>
-            </h2>
+
             <iframe
               class="map-embed"
               title="Bernd Pastel on Google Maps"
@@ -106,16 +97,7 @@
             </p>
           </section>
 
-          <section>
-            <h2>
-              <span data-lang="de">Studio-Vibes</span>
-              <span data-lang="en" hidden>Studio Vibes</span>
-            </h2>
-            <p>
-              <span data-lang="de">Kleine Home-Studio Energie, große Details.</span>
-              <span data-lang="en" hidden>Cozy home-studio energy, big details.</span>
-            </p>
-          </section>
+
         </div>
 
         <div class="scatter-photos">
@@ -124,29 +106,6 @@
           <img src="images/studio-vibes-3.jpg" alt="Studio vibe photo" />
         </div>
       </main>
-
-      <footer>
-        <div>
-          <span data-lang="de">Bernd Pastel · Berlin-Neukölln</span>
-          <span data-lang="en" hidden>Bernd Pastel · Berlin-Neukölln</span>
-        </div>
-      </footer>
     </div>
-      <script>
-      function setLanguage(lang) {
-        document.documentElement.lang = lang;
-        document.querySelectorAll("[data-lang]").forEach((el) => {
-          const hide = el.dataset.lang !== lang;
-          el.hidden = hide;
-          el.style.display = hide ? "none" : "";
-        });
-      }
-      function toggleLang() {
-        const current = document.documentElement.lang || "de";
-        const next = current === "de" ? "en" : "de";
-        setLanguage(next);
-      }
-      setLanguage(document.documentElement.lang || "de");
-    </script>
 </body>
 </html>
