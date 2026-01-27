@@ -61,13 +61,13 @@
 
 			          <p>
             <span data-lang="de">
-              Alle Nail-Sets beinhalten eine Russian Manicure mit sanfter
-              Nagelhautpflege, gründlicher Reinigung, präzisem Formen und glatter
+              Alle Nail-Sets beinhalten eine Russian Manicure mit
+              Nagelhautpflege, gründlicher Reinigung, formen und
               Vorbereitung für ein langes, sauberes Finish.
             </span>
             <span data-lang="en" hidden>
-              All nail sets come with a Russian Manicure including gentle cuticle
-              care, thorough cleansing, precise shaping, and smooth prep for a
+              All nail sets come with a Russian Manicure including cuticle
+              care, thorough cleansing, shaping, and prep for a
               long-lasting, clean finish.
             </span>
           </p>
@@ -87,7 +87,10 @@
 
           <div class="services-grid">
             <article class="service-card">
-              <img src="images/nails/nail-07.jpg" alt="Gel-X extensions" />
+              <div class="service-carousel">
+                <img src="images/nails/nail-07.jpg" alt="Gel-X set 1" />
+                <img src="images/nails/gelx-2.jpg" alt="Gel-X set 2" />
+              </div>
               <h3>Gel-X</h3>
               <p>
                 <span data-lang="de">Die besten Nail-Extensions.</span>
@@ -122,7 +125,12 @@
             </article>
 
             <article class="service-card">
-              <img src="images/nails/3d-art.jpg" alt="3D nail art" />
+              <div class="service-carousel">
+                <img src="images/nails/3d-art.jpg" alt="3D art set 1" />
+                <img src="images/nails/3d-art-2.jpg" alt="3D art set 2" />
+                <img src="images/nails/3d-art-3.jpg" alt="3D art set 3" />
+                <img src="images/nails/3d-art-4.jpg" alt="3D art set 4" />
+              </div>
               <h3>3D Art</h3>
               <p>
                 <span data-lang="de">Skulpturierte Details und 3D-Akzente.</span>
@@ -131,9 +139,12 @@
             </article>
 
             <article class="service-card">
-              <img src="images/nails/nail-08.jpg" alt="Gemstone nails" />
+              <div class="service-carousel">
+                <img src="images/nails/nail-08.jpg" alt="Gemstones set 1" />
+                <img src="images/nails/gemstones-2.jpg" alt="Gemstones set 2" />
+              </div>
               <h3>
-                <span data-lang="de">Edelsteine</span>
+                <span data-lang="de">Steine</span>
                 <span data-lang="en" hidden>Gemstones</span>
               </h3>
               <p>
@@ -149,8 +160,8 @@
                 <span data-lang="en" hidden>Transfer Foil</span>
               </h3>
               <p>
-                <span data-lang="de">Schimmernde Folienakzente und Overlays.</span>
-                <span data-lang="en" hidden>Shimmering foil accents and overlays.</span>
+                <span data-lang="de">Gedruckte folienakzente und Overlays.</span>
+                <span data-lang="en" hidden>Printed foil accents and overlays.</span>
               </p>
             </article>
 
@@ -164,13 +175,16 @@
                 <span data-lang="en" hidden>Bridal Sets</span>
               </h3>
               <p>
-                <span data-lang="de">Elegante Looks für Hochzeiten und Feiern.</span>
+                <span data-lang="de">Looks für Hochzeiten.</span>
                 <span data-lang="en" hidden>Elegant looks for weddings and celebrations.</span>
               </p>
             </article>
 
             <article class="service-card">
-              <img src="images/nails/custom-painted.jpg" alt="Custom painted nail designs" />
+              <div class="service-carousel">
+                <img src="images/nails/custom-painted.jpg" alt="Custom painted set 1" />
+                <img src="images/nails/handpainted-2.jpg" alt="Custom painted set 2" />
+              </div>
               <h3>
                 <span data-lang="de">Handbemalt Designs</span>
                 <span data-lang="en" hidden>Custom painted designs</span>
@@ -212,7 +226,10 @@
             </article>
 
             <article class="service-card">
-              <img src="images/nails/cat-eye.jpg" alt="Cat eye nails" />
+              <div class="service-carousel">
+                <img src="images/nails/cat-eye.jpg" alt="Cat eye set 1" />
+                <img src="images/nails/cat-eye-2.jpg" alt="Cat eye set 2" />
+              </div>
               <h3>
                 <span data-lang="de">Cat Eye</span>
                 <span data-lang="en" hidden>Cat Eye</span>
@@ -227,6 +244,7 @@
               <div class="service-carousel">
                 <img src="images/nails/nail-10.jpg" alt="Mix and match set 1" />
                 <img src="images/nails/nail-11.jpg" alt="Mix and match set 2" />
+                <img src="images/nails/mixmatch-3.jpg" alt="Mix and match set 3" />
               </div>
               <h3>
                 <span data-lang="de">Mix & Match Sets</span>
@@ -239,7 +257,10 @@
             </article>
 
             <article class="service-card">
-              <img src="images/nails/nail-06.jpg" alt="Airbrush nails" />
+              <div class="service-carousel">
+                <img src="images/nails/nail-06.jpg" alt="Airbrush set 1" />
+                <img src="images/nails/airbrush-2.jpg" alt="Airbrush set 2" />
+              </div>
               <h3>
                 <span data-lang="de">Airbrush</span>
                 <span data-lang="en" hidden>Airbrush</span>
@@ -275,7 +296,10 @@
             </article>
 
             <article class="service-card">
-              <img src="images/nails/chrome.jpg" alt="Chrome nails" />
+              <div class="service-carousel">
+                <img src="images/nails/chrome.jpg" alt="Chrome set 1" />
+                <img src="images/nails/chrome-2.jpg" alt="Chrome set 2" />
+              </div>
               <h3>
                 <span data-lang="de">Chrome</span>
                 <span data-lang="en" hidden>Chrome</span>
@@ -290,5 +314,19 @@
 
       </main>
     </div>
-</body>
+    <script>
+      (function () {
+        const interval = 2;
+        document.querySelectorAll('.service-carousel').forEach((carousel) => {
+          const imgs = Array.from(carousel.querySelectorAll('img'));
+          if (!imgs.length) return;
+          const duration = imgs.length * interval;
+          carousel.style.setProperty('--carousel-duration', `${duration}s`);
+          imgs.forEach((img, i) => {
+            img.style.animationDelay = `${-i * interval}s`;
+          });
+        });
+      })();
+    </script>
+  </body>
 </html>

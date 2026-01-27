@@ -40,7 +40,7 @@ body {
 a {
   color: var(--ink);
   text-decoration: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid black;
 }
 
 a:hover {
@@ -55,6 +55,10 @@ a:hover {
 
 header {
   padding: 28px 0 8px;
+}
+
+header a {
+	border: none;
 }
 
 .header-bar {
@@ -229,28 +233,24 @@ h3 {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  animation: serviceFade 6s infinite;
+  animation: serviceFade var(--carousel-duration, 6s) linear infinite;
 }
 
-.service-carousel img:nth-child(1) {
-  animation-delay: 0s;
-}
 
-.service-carousel img:nth-child(2) {
-  animation-delay: 3s;
-}
+
+
 
 @keyframes serviceFade {
   0% {
     opacity: 0;
   }
-  10% {
+  5% {
     opacity: 1;
   }
-  40% {
+  45% {
     opacity: 1;
   }
-  50% {
+  55% {
     opacity: 0;
   }
   100% {
@@ -259,6 +259,7 @@ h3 {
 }
 
 .service-card p {
+
   margin: 0 0 6px;
 }
 
