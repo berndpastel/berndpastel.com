@@ -1,5 +1,8 @@
 .nav-logo-link {
   border-bottom: none !important;
+  margin-right: auto;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-logo-link:hover {
@@ -186,8 +189,14 @@ h3 {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
+}
+
+@media (max-width: 760px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .prices {
@@ -198,7 +207,8 @@ h3 {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 10px 24px;
-  max-width: 720px;
+  max-width: none;
+  width: 100%;
 }
 
 .price-list div:nth-child(2n) {
@@ -229,7 +239,7 @@ h3 {
 
 .service-card img {
   width: 100%;
-  height: 180px;
+  height: 500px;
   object-fit: cover;
   border-radius: 12px;
   border: 1px solid var(--ink);
@@ -237,7 +247,7 @@ h3 {
 
 .service-carousel {
   position: relative;
-  height: 180px;
+  height: 500px;
   border-radius: 12px;
   border: 1px solid var(--ink);
   overflow: hidden;
@@ -250,7 +260,9 @@ h3 {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  animation: serviceFade var(--carousel-duration, 6s) linear infinite;
+  animation: serviceFade var(--carousel-duration, 9s) linear infinite;
+  animation-fill-mode: both;
+  will-change: opacity;
 }
 
 
@@ -261,13 +273,13 @@ h3 {
   0% {
     opacity: 0;
   }
-  5% {
+  8% {
     opacity: 1;
   }
-  45% {
+  58% {
     opacity: 1;
   }
-  55% {
+  75% {
     opacity: 0;
   }
   100% {
