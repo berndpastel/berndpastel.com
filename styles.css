@@ -9,7 +9,7 @@
   --sky: #a7d5ff;
   --lavender: #cd89e4;
   --ink: var(--black);
-  --muted: #3a2f40;
+  --muted: #000;
   --accent: var(--coral);
   --card: transparent;
   --border: transparent;
@@ -63,7 +63,6 @@ header {
   gap: 16px;
   flex-wrap: wrap;
 }
-
 
 .nav-logo {
   height: 32px;
@@ -194,7 +193,6 @@ h3 {
   gap: 18px;
 }
 
-
 .prices {
   gap: 28px;
 }
@@ -225,7 +223,6 @@ h3 {
   border-radius: 12px;
   border: 1px solid var(--ink);
 }
-
 
 .service-carousel {
   position: relative;
@@ -288,9 +285,10 @@ h3 {
   border: 1px solid var(--ink);
   box-shadow: 0 12px 22px rgba(0, 0, 0, 0.12);
   opacity: 1;
-  transition: opacity 0.4s ease, transform 0.6s ease;
+  transition:
+    opacity 0.4s ease,
+    transform 0.6s ease;
 }
-
 
 .home-grid {
   display: grid;
