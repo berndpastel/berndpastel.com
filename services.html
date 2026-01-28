@@ -314,15 +314,19 @@
     </div>
     <script>
       (function () {
-        const interval = 3;
+        const intervalMs = 3000;
         document.querySelectorAll('.service-carousel').forEach((carousel) => {
           const imgs = Array.from(carousel.querySelectorAll('img'));
           if (!imgs.length) return;
-          const duration = imgs.length * interval;
-          carousel.style.setProperty('--carousel-duration', `${duration}s`);
-          imgs.forEach((img, i) => {
-            img.style.animationDelay = `${-i * interval}s`;
-          });
+          let index = 0;
+          imgs.forEach((img) => img.classList.remove('is-active'));
+          imgs[0].classList.add('is-active');
+          if (imgs.length < 2) return;
+          setInterval(() => {
+            imgs[index].classList.remove('is-active');
+            index = (index + 1) % imgs.length;
+            imgs[index].classList.add('is-active');
+          }, intervalMs);
         });
       })();
     </script>
