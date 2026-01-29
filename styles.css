@@ -293,6 +293,8 @@ nav a[aria-current="page"] {
 .nav-toggle {
   display: none;
   font-family: inherit;
+  color: var(--foreground);
+  font-weight: 600;
 }
 
 .nav-toggle:active {
@@ -774,6 +776,7 @@ footer {
     top: auto;
     right: auto;
     z-index: 1001;
+    color: var(--foreground);
   }
 
   nav {
