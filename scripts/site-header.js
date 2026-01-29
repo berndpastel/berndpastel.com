@@ -7,7 +7,6 @@
   }
 
   var current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  var showLangToggle = current !== 'index.html';
 
   header.innerHTML =
     '<a href="index.html" class="nav-logo-link">' +
@@ -31,12 +30,10 @@
     '  <a href="contact.html"><span data-lang="de">Kontakt</span><span data-lang="en" hidden>Contact</span></a>' +
     '  <a href="about.html"><span data-lang="de">Über mich</span><span data-lang="en" hidden>About</span></a>' +
     '</nav>' +
-    (showLangToggle
-      ? '<div class="lang-toggle-group" role="group" aria-label="Language">' +
-        '  <button class="button-link lang-toggle" type="button" data-lang-toggle="de" aria-pressed="false">Deutsch</button>' +
-        '  <button class="button-link lang-toggle" type="button" data-lang-toggle="en" aria-pressed="false">English</button>' +
-        '</div>'
-      : '') +
+    '<div class="lang-toggle-group" role="group" aria-label="Language">' +
+    '  <button class="button-link lang-toggle" type="button" data-lang-toggle="de" aria-pressed="false">Deutsch</button>' +
+    '  <button class="button-link lang-toggle" type="button" data-lang-toggle="en" aria-pressed="false">English</button>' +
+    '</div>' +
     '<button class="button-link nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>';
   var links = header.querySelectorAll('nav a[href]');
   links.forEach(function (link) {
