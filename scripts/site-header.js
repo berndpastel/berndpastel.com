@@ -9,6 +9,20 @@
   var current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
 
   header.innerHTML =
+    '<button class="button-link nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">' +
+    '  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">' +
+    '    <g clip-path="url(#clip0_16_1807)">' +
+    '      <path d="M2.5 8H13.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '      <path d="M2.5 4H13.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '      <path d="M2.5 12H13.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '    </g>' +
+    '    <defs>' +
+    '      <clipPath id="clip0_16_1807">' +
+    '        <rect width="16" height="16" fill="white"/>' +
+    '      </clipPath>' +
+    '    </defs>' +
+    '  </svg>' +
+    '</button>' +
     '<a href="index.html" class="nav-logo-link">' +
     '  <svg class="nav-logo" width="1900" height="279" viewBox="0 0 1900 279" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Bernd Pastel" role="img">' +
     '    <path d="M560.517 40.6885V244.148H632.398V193.333L664.765 244.148H732.455V40.6885H660.574V91.5033L628.207 40.6885H560.517Z" fill="black"/>' +
@@ -33,8 +47,7 @@
     '<div class="lang-toggle-group" role="group" aria-label="Language">' +
     '  <button class="button-link lang-toggle" type="button" data-lang-toggle="de" aria-pressed="false">Deutsch</button>' +
     '  <button class="button-link lang-toggle" type="button" data-lang-toggle="en" aria-pressed="false">English</button>' +
-    '</div>' +
-    '<button class="button-link nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>';
+    '</div>';
   var links = header.querySelectorAll('nav a[href]');
   links.forEach(function (link) {
     var href = link.getAttribute('href');

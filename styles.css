@@ -502,7 +502,7 @@ a span {
 
 .price-guide {
   display: grid;
-  gap: 40px;
+  gap: 80px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
