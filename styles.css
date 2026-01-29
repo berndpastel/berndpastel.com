@@ -597,7 +597,9 @@ a {
 
 .service-carousel {
   position: relative;
-  height: 500px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
   border-radius: var(--radius);
   overflow: hidden;
 }
