@@ -190,7 +190,7 @@ select {
 .container {
   width: min(1100px, 86vw);
   margin: 0 auto;
-  padding: 28px 0 64px;
+  padding: 0 0 64px;
   position: relative;
   z-index: 1;
 }
@@ -203,26 +203,7 @@ select {
 }
 
 .home-hero h1 {
-  font-size: clamp(2.5rem, 8vw, 6rem);
-  text-shadow:
-    0 0 1px var(--background),
-    0 0 2px var(--background),
-    0 0 3px var(--background),
-    0 0 4px var(--background),
-    0 0 5px var(--background),
-    0 0 6px var(--background),
-    0 0 7px var(--background),
-    0 0 8px var(--background),
-    0 0 9px var(--background),
-    0 0 10px var(--background),
-    0 0 11px var(--background),
-    0 0 12px var(--background);
-}
-
-@media (max-width: 760px) {
-  .home-hero h1 {
-    font-size: 14vw;
-  }
+  font-size: 15vw;
 }
 
 .junk-scatter-layer {
@@ -337,6 +318,27 @@ h3 {
   margin: 12px 0 6px;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  text-shadow:
+    0 0 1px var(--background),
+    0 0 2px var(--background),
+    0 0 3px var(--background),
+    0 0 4px var(--background),
+    0 0 5px var(--background),
+    0 0 6px var(--background),
+    0 0 7px var(--background),
+    0 0 8px var(--background),
+    0 0 9px var(--background),
+    0 0 10px var(--background),
+    0 0 11px var(--background),
+    0 0 12px var(--background);
+}
+
 .photo-stack {
   display: grid;
   gap: 16px;
@@ -394,10 +396,6 @@ h3 {
   }
 }
 
-.about-grid section {
-  background: var(--background);
-}
-
 .location-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -418,7 +416,6 @@ h3 {
 }
 
 .services-wrap {
-  background: var(--background);
   border-radius: var(--radius);
 }
 
@@ -434,12 +431,10 @@ h3 {
 
 .prices {
   gap: 28px;
-  background-color: var(--background);
   background-repeat: repeat;
   background-blend-mode: color-burn;
   padding: 28px;
   border-radius: var(--radius);
-  --border-color: var(--foreground);
   max-width: 600px;
   margin: 40px auto;
 }
@@ -489,7 +484,6 @@ h3 {
   gap: 12px;
   align-items: start;
   grid-template-columns: 1fr;
-  background: var(--background);
   border-radius: var(--radius);
   transform: rotate(-0.8deg);
 }
@@ -553,7 +547,6 @@ h3 {
 
 .price-guide-section {
   margin-top: 28px;
-  background: var(--background);
   border-radius: var(--radius);
 }
 
@@ -569,7 +562,6 @@ h3 {
 }
 
 .price-extras-inner {
-  background-color: var(--background);
   margin: 80px auto;
 }
 
@@ -581,7 +573,6 @@ h3 {
 .service-card {
   border-radius: var(--radius);
   border: 0;
-  background: var(--background);
   transform: rotate(-1deg);
 }
 
