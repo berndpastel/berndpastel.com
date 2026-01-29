@@ -323,7 +323,8 @@ h2,
 h3,
 h4,
 p,
-a {
+a,
+span {
   text-shadow:
     0 0 1px var(--background),
     0 0 2px var(--background),
