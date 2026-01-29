@@ -22,7 +22,7 @@
   --card: transparent;
   --border: transparent;
   --radius: 0;
-  --border-width: 8px;
+  --border-width: 4px;
   --border-color: white;
   --btn-bg: linear-gradient(180deg, #ffe6f4 0%, #ff8fc6 45%, #ff4aa2 100%);
   --btn-bg-hover: linear-gradient(
@@ -231,6 +231,7 @@ nav {
   flex-wrap: nowrap;
   font-family: "Funnel Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 0.95rem;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--foreground);
@@ -356,16 +357,14 @@ h3 {
   align-items: start;
 }
 
-.about-content {
-  background: var(--background);
-  padding: 18px;
-  border-radius: var(--radius);
-}
-
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.about-grid section {
+  background: var(--background);
 }
 
 .location-grid {
