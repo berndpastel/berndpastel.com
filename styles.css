@@ -58,7 +58,7 @@ body {
   font-size: 24px;
   position: relative;
   cursor:
-    url("junk/OK%20Rose%20Cursor.png") 16 16,
+    url("cursor.png") 0 0,
     auto;
 }
 
@@ -66,6 +66,9 @@ a {
   color: var(--foreground);
   text-decoration: none;
   border-bottom: var(--border-width) solid var(--border-color);
+  cursor:
+    url("cursor.png") 0 0,
+    pointer;
 }
 
 a:hover {
@@ -84,8 +87,19 @@ a:hover {
   font-size: 0.95em;
   text-shadow: var(--btn-text-shadow);
   text-decoration: none;
-  cursor: pointer;
+  cursor:
+    url("cursor.png") 0 0,
+    pointer;
   white-space: nowrap;
+}
+
+button,
+input,
+textarea,
+select {
+  cursor:
+    url("cursor.png") 0 0,
+    text;
 }
 
 .button-link:hover {
@@ -189,6 +203,19 @@ a:hover {
 
 .home-hero h1 {
   font-size: clamp(2.5rem, 8vw, 6rem);
+  text-shadow:
+    0 0 1px var(--background),
+    0 0 2px var(--background),
+    0 0 3px var(--background),
+    0 0 4px var(--background),
+    0 0 5px var(--background),
+    0 0 6px var(--background),
+    0 0 7px var(--background),
+    0 0 8px var(--background),
+    0 0 9px var(--background),
+    0 0 10px var(--background),
+    0 0 11px var(--background),
+    0 0 12px var(--background);
 }
 
 .junk-scatter-layer {
@@ -329,7 +356,6 @@ h3 {
 .about-carousel img.is-active {
   opacity: 1;
 }
-
 
 .map-embed {
   width: 100%;
