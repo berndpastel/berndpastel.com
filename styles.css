@@ -221,7 +221,7 @@ select {
 
 @media (max-width: 760px) {
   .home-hero h1 {
-    font-size: 7vw;
+    font-size: 14vw;
   }
 }
 
