@@ -619,6 +619,53 @@ h3 {
   opacity: 1;
 }
 
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(34px, 5vw, 44px);
+  height: clamp(34px, 5vw, 44px);
+  border-radius: 999px;
+  color: var(--foreground);
+  font-size: 1.2rem;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  cursor:
+    url("cursor.png") 0 0,
+    pointer;
+  background: none;
+  border: none;
+}
+
+.service-carousel:hover .carousel-nav,
+.about-carousel:hover .carousel-nav,
+.price-guide-carousel:hover .carousel-nav {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.carousel-nav:hover {
+  opacity: 1;
+}
+
+.carousel-nav-prev {
+  left: 12px;
+}
+
+.carousel-nav-next {
+  right: 12px;
+}
+
+@media (hover: none) {
+  .carousel-nav {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
 .service-card p {
   margin: 0 0 6px;
 }
