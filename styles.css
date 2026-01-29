@@ -57,7 +57,9 @@ body {
   line-height: 1.2;
   font-size: 24px;
   position: relative;
-  cursor: url("junk/OK%20Rose%20Cursor.png") 16 16, auto;
+  cursor:
+    url("junk/OK%20Rose%20Cursor.png") 16 16,
+    auto;
 }
 
 a {
@@ -418,7 +420,6 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 600px;
   width: 100%;
 }
 
@@ -440,7 +441,7 @@ h3 {
 
 .price-dots {
   flex: 1;
-  border-bottom: var(--border-width) dotted var(--border-color);
+  border-bottom: var(--border-width) dotted var(--foreground);
   transform: translateY(-2px);
 }
 
@@ -462,6 +463,19 @@ h3 {
   grid-template-columns: 1fr;
   background: var(--background);
   border-radius: var(--radius);
+  transform: rotate(-0.8deg);
+}
+
+.price-guide-item:nth-child(2n) {
+  transform: rotate(0.9deg);
+}
+
+.price-guide-item:nth-child(3n) {
+  transform: rotate(-0.4deg);
+}
+
+.price-guide-item:nth-child(5n) {
+  transform: rotate(1.3deg);
 }
 
 .price-guide-item img {
@@ -532,6 +546,15 @@ h3 {
   background: var(--background);
   padding: 18px;
   border-radius: var(--radius);
+  width: 100%;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.price-extras-inner {
+  background-color: var(--background);
+  margin: 80px auto;
 }
 
 @media (max-width: 760px) {
@@ -543,6 +566,19 @@ h3 {
   border-radius: var(--radius);
   border: 0;
   background: var(--background);
+  transform: rotate(-1deg);
+}
+
+.service-card:nth-child(2n) {
+  transform: rotate(1.2deg);
+}
+
+.service-card:nth-child(3n) {
+  transform: rotate(-0.6deg);
+}
+
+.service-card:nth-child(5n) {
+  transform: rotate(1.8deg);
 }
 
 .service-card img {
