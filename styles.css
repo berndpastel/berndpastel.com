@@ -219,6 +219,12 @@ select {
     0 0 12px var(--background);
 }
 
+@media (max-width: 760px) {
+  .home-hero h1 {
+    font-size: 7vw;
+  }
+}
+
 .junk-scatter-layer {
   position: absolute;
   inset: 0;
