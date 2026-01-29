@@ -377,29 +377,17 @@ button span {
   border-radius: var(--radius);
 }
 
-.about-carousel {
-  position: relative;
-  overflow: hidden;
-  height: 520px;
+.about-photo {
   border-radius: var(--radius);
+  overflow: hidden;
   transform: rotate(-2deg);
 }
 
-.about-carousel img {
-  position: absolute;
-  inset: 0;
+.about-photo img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 0;
+  height: auto;
   border-radius: 0;
-  opacity: 0;
-  transition: opacity 0.8s ease;
-  will-change: opacity;
-}
-
-.about-carousel img.is-active {
-  opacity: 1;
 }
 
 .map-embed {
@@ -412,9 +400,21 @@ button span {
 
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 28px;
   align-items: start;
+}
+
+.about-content {
+  min-height: calc(100svh - 140px);
+  display: flex;
+  align-items: center;
+}
+
+.about-content .about-grid {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 @media (max-width: 900px) {
@@ -471,12 +471,9 @@ button span {
   flex-direction: column;
   gap: 24px;
   width: 100%;
-}
-
-.price-item {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .price-row {
@@ -512,19 +509,6 @@ button span {
   align-items: start;
   grid-template-columns: 1fr;
   border-radius: var(--radius);
-  transform: rotate(-0.8deg);
-}
-
-.price-guide-item:nth-child(2n) {
-  transform: rotate(0.9deg);
-}
-
-.price-guide-item:nth-child(3n) {
-  transform: rotate(-0.4deg);
-}
-
-.price-guide-item:nth-child(5n) {
-  transform: rotate(1.3deg);
 }
 
 .price-guide-item img {
