@@ -434,7 +434,6 @@ a span {
 }
 
 .location-info {
-  background: var(--background);
   padding: 20px;
   border-radius: var(--radius);
 }
@@ -566,7 +565,6 @@ a span {
 
 .price-extras-section {
   margin-top: 28px;
-  background: var(--background);
   padding: 18px;
   border-radius: var(--radius);
   width: 100%;
