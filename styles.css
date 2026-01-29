@@ -180,6 +180,17 @@ a:hover {
   z-index: 1;
 }
 
+.home-hero {
+  min-height: calc(100vh - 140px);
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.home-hero h1 {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+}
+
 .junk-scatter-layer {
   position: absolute;
   inset: 0;
