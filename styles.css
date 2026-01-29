@@ -380,7 +380,6 @@ button span {
 .about-photo {
   border-radius: var(--radius);
   overflow: hidden;
-  transform: rotate(-2deg);
 }
 
 .about-photo img {
