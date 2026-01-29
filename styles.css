@@ -450,15 +450,14 @@ h1 {
 
 .prices {
   gap: 28px;
-  background-color: honeydew;
-  background-image: url("https://dl.glitter-graphics.com/pub/3534/3534856cm6809xsai.gif");
+  background-color: var(--background);
   background-repeat: repeat;
   background-blend-mode: color-burn;
   padding: 28px;
   border-radius: var(--radius);
   --border-color: var(--foreground);
   max-width: 600px;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 
 .price-list {
