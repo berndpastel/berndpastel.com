@@ -277,6 +277,25 @@ nav a[aria-current="page"] {
   border-bottom-color: var(--foreground);
 }
 
+.lang-toggle-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-toggle {
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lang-toggle[aria-pressed="true"] {
+  background: var(--btn-bg-active);
+  box-shadow: var(--btn-shadow-active);
+  border-color: var(--foreground);
+}
+
 .nav-toggle {
   display: none;
   font-family: inherit;
@@ -338,6 +357,13 @@ span {
     0 0 10px var(--background),
     0 0 11px var(--background),
     0 0 12px var(--background);
+}
+
+.button-link,
+.button-link span,
+button,
+button span {
+  text-shadow: none;
 }
 
 .photo-stack {
@@ -777,6 +803,11 @@ footer {
     right: auto;
     z-index: 1001;
     color: var(--foreground);
+  }
+
+  .lang-toggle-group {
+    position: relative;
+    z-index: 1001;
   }
 
   nav {
