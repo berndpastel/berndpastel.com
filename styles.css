@@ -81,6 +81,7 @@ a:hover {
   border-radius: 999px;
   background: var(--btn-bg);
   border: 1px solid var(--btn-border);
+  color: var(--foreground);
   font-family: inherit;
   box-shadow: var(--btn-shadow);
   letter-spacing: 0.02em;
