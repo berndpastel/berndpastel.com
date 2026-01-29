@@ -11,8 +11,8 @@
 
 :root {
   color-scheme: light;
-  --foreground: purple;
-  --background: pink;
+  --foreground: #333;
+  --background: #fefae9;
   --pink: #ffc0cb;
   --coral: #fa8072;
   --lemon: #f5f592;
@@ -21,7 +21,7 @@
   --lavender: #cd89e4;
   --card: transparent;
   --border: transparent;
-  --radius: 40px;
+  --radius: 0;
   --border-width: 8px;
   --border-color: white;
 }
@@ -36,7 +36,8 @@ body {
   color: var(--foreground);
   background: var(--background);
   line-height: 1.6;
-  font-size: 20px;
+  font-size: 24px;
+  position: relative;
 }
 
 a {
@@ -49,10 +50,61 @@ a:hover {
   border-bottom-color: var(--foreground);
 }
 
+.button-link {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffe6f4 0%, #ff8fc6 45%, #ff4aa2 100%);
+  border: 1px solid #7a1143;
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.85),
+    inset 0 -4px 6px rgba(128, 9, 60, 0.6),
+    0 5px 10px rgba(90, 9, 46, 0.45);
+  letter-spacing: 0.02em;
+  font-size: 0.95em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+}
+
+.button-link:hover {
+  background: linear-gradient(180deg, #fff0f8 0%, #ffa9d4 45%, #ff5fb0 100%);
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.85),
+    inset 0 -4px 6px rgba(128, 9, 60, 0.6),
+    0 4px 8px rgba(90, 9, 46, 0.4);
+}
+
+.button-link:active {
+  transform: translateY(2px);
+  background: linear-gradient(180deg, #ff9dcf 0%, #ff2f93 100%);
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.7),
+    inset 0 4px 10px rgba(128, 9, 60, 0.7);
+}
+
 .container {
-  width: min(1100px, 92vw);
+  width: min(1100px, 86vw);
   margin: 0 auto;
   padding: 28px 0 64px;
+  position: relative;
+  z-index: 1;
+}
+
+.junk-scatter-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.junk-scatter-layer .junk-sprite {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  image-rendering: auto;
+  opacity: 0.95;
 }
 
 header {
@@ -139,12 +191,28 @@ section {
 
 h2 {
   margin-top: 0;
-  font-size: 1.35rem;
+  font-size: 50px;
+  font-family: "Charm", "Times New Roman", serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1;
 }
 
 h3 {
   margin: 12px 0 6px;
-  font-size: 1.1rem;
+  font-size: 50px;
+  font-family: "Charm", "Times New Roman", serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1;
+}
+
+h1 {
+  font-family: "Charm", "Times New Roman", serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .pill {
@@ -152,7 +220,6 @@ h3 {
   padding: 6px 12px;
   border-radius: 999px;
   background: var(--lemon);
-  border: var(--border-width) solid var(--border-color);
   font-size: 0.9rem;
   margin-right: 8px;
   margin-bottom: 8px;
@@ -167,7 +234,6 @@ h3 {
   width: 100%;
   height: auto;
   border-radius: var(--radius);
-  border: var(--border-width) solid var(--border-color);
 }
 
 .about-carousel {
@@ -175,7 +241,6 @@ h3 {
   overflow: hidden;
   height: 520px;
   border-radius: var(--radius);
-  border: var(--border-width) solid var(--border-color);
   transform: rotate(-2deg);
 }
 
@@ -225,7 +290,6 @@ h3 {
 .map-embed {
   width: 100%;
   min-height: 320px;
-  border: var(--border-width) solid var(--border-color);
   border-radius: var(--radius);
   transform: rotate(2deg);
   transform-origin: center;
@@ -251,6 +315,12 @@ h3 {
   align-items: start;
 }
 
+.location-info {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: var(--radius);
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -265,13 +335,22 @@ h3 {
 
 .prices {
   gap: 28px;
+  background-color: honeydew;
+  background-image: url("https://dl.glitter-graphics.com/pub/3534/3534856cm6809xsai.gif");
+  background-repeat: repeat;
+  background-blend-mode: color-burn;
+  padding: 28px;
+  border-radius: var(--radius);
+  --border-color: var(--foreground);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .price-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: none;
+  max-width: 600px;
   width: 100%;
 }
 
@@ -294,7 +373,7 @@ h3 {
 .price-dots {
   flex: 1;
   border-bottom: var(--border-width) dotted var(--border-color);
-  transform: translateY(-2px); 
+  transform: translateY(-2px);
 }
 
 .price-desc {
@@ -318,10 +397,10 @@ h3 {
   margin: 18px 0 6px;
 }
 .service-card {
-  padding: 0;
-  border-radius: 0;
+  padding: 20px;
+  border-radius: var(--radius);
   border: 0;
-  background: transparent;
+  background: #ffffff;
 }
 
 .service-card img {
@@ -329,14 +408,12 @@ h3 {
   height: 500px;
   object-fit: cover;
   border-radius: var(--radius);
-  border: var(--border-width) solid var(--border-color);
 }
 
 .service-carousel {
   position: relative;
   height: 500px;
   border-radius: var(--radius);
-  border: var(--border-width) solid var(--border-color);
   overflow: hidden;
 }
 
@@ -371,7 +448,6 @@ h3 {
   position: absolute;
   width: min(34vw, 320px);
   border-radius: var(--radius);
-  border: var(--border-width) solid var(--border-color);
   opacity: 1;
   transition:
     opacity 0.4s ease,
@@ -389,7 +465,6 @@ h3 {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--radius);
-  border: var(--border-width) solid var(--border-color);
 }
 
 @media (max-width: 900px) {
@@ -407,7 +482,6 @@ h3 {
   position: absolute;
   width: min(42vw, 420px);
   border-radius: var(--radius);
-  border: var(--border-width) solid var(--border-color);
 }
 
 .scatter-photos img:nth-child(1) {
@@ -429,10 +503,13 @@ h3 {
 }
 
 .contact-big {
+  display: grid;
   font-size: clamp(1.6rem, 5vw, 4rem);
   line-height: 1.2;
   text-align: center;
   justify-items: center;
+  min-height: calc(100vh - 220px);
+  place-content: center;
 }
 
 .contact-big p {
