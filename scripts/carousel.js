@@ -41,12 +41,11 @@
       return;
     }
 
-    function createNavButton(direction) {
+    function createNavZone(direction) {
       var button = document.createElement('button');
       button.type = 'button';
-      button.className = 'carousel-nav carousel-nav-' + direction;
+      button.className = 'carousel-zone carousel-zone-' + direction;
       button.setAttribute('aria-label', direction === 'prev' ? 'Previous image' : 'Next image');
-      button.textContent = direction === 'prev' ? '⬅️' : '➡️';
       button.addEventListener('click', function () {
         show(direction === 'prev' ? index - 1 : index + 1);
         stopped = true;
@@ -58,8 +57,8 @@
       return button;
     }
 
-    carousel.appendChild(createNavButton('prev'));
-    carousel.appendChild(createNavButton('next'));
+    carousel.appendChild(createNavZone('prev'));
+    carousel.appendChild(createNavZone('next'));
 
     startInterval();
   });

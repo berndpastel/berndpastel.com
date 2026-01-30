@@ -686,51 +686,42 @@ a span {
   opacity: 1;
 }
 
-.carousel-nav {
+.carousel-zone {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: clamp(34px, 5vw, 44px);
-  height: clamp(34px, 5vw, 44px);
-  border-radius: 999px;
-  color: var(--foreground);
-  font-size: 1.2rem;
-  display: grid;
-  place-items: center;
+  top: 0;
+  bottom: 0;
+  width: 50%;
   z-index: 2;
-  opacity: 0;
-  pointer-events: none;
+  background: transparent;
+  border: none;
+  padding: 0;
   cursor:
     url("cursor.png") 0 0,
     pointer;
-  background: none;
-  border: none;
+  transition: background 0.25s ease;
 }
 
-.service-carousel:hover .carousel-nav,
-.about-carousel:hover .carousel-nav,
-.price-guide-carousel:hover .carousel-nav {
-  opacity: 1;
-  pointer-events: auto;
+.carousel-zone:hover,
+.carousel-zone:focus-visible {
+  outline: none;
 }
 
-.carousel-nav:hover {
-  opacity: 1;
+.carousel-zone-prev {
+  left: 0;
 }
 
-.carousel-nav-prev {
-  left: 12px;
+.carousel-zone-prev:hover,
+.carousel-zone-prev:focus-visible {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0));
 }
 
-.carousel-nav-next {
-  right: 12px;
+.carousel-zone-next {
+  right: 0;
 }
 
-@media (hover: none) {
-  .carousel-nav {
-    opacity: 1;
-    pointer-events: auto;
-  }
+.carousel-zone-next:hover,
+.carousel-zone-next:focus-visible {
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0));
 }
 
 .service-card p {
