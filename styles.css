@@ -673,8 +673,11 @@ a span {
 }
 
 .technique-explanation {
-  display: grid;
   gap: 40px;
+}
+
+.technique-explanation .price-info-card:last-child {
+  grid-column: 1 / -1;
 }
 
 @media (max-width: 760px) {
