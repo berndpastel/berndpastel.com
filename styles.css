@@ -843,6 +843,18 @@ a span {
   margin: 0 0 16px;
 }
 
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-row p {
+  margin: 0;
+}
+
 footer {
   margin-top: 36px;
   padding-top: 16px;
