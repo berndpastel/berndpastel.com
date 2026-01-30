@@ -99,8 +99,9 @@
 
   function applyPositions(layer) {
     var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    var height = getDocHeight();
-    layer.style.height = height + 'px';
+    // Use viewport height as minimum, but allow content to be taller
+    var contentHeight = document.querySelector('.container') ? document.querySelector('.container').offsetHeight : 0;
+    var height = Math.max(window.innerHeight, contentHeight);
     var sprites = layer.querySelectorAll('img');
     sprites.forEach(function (sprite) {
       var x = parseFloat(sprite.dataset.x || '0');
