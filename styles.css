@@ -22,7 +22,7 @@
   --card: transparent;
   --border: transparent;
   --radius: 4px;
-  --border-width: 4px;
+  --border-width: 2px;
   --border-color: white;
   --btn-bg: linear-gradient(180deg, #ffe6f4 0%, #ff8fc6 45%, #ff4aa2 100%);
   --btn-bg-hover: linear-gradient(
@@ -70,7 +70,7 @@ body {
 a {
   color: var(--foreground);
   text-decoration: none;
-  border-bottom: var(--border-width) solid var(--border-color);
+  border-bottom: var(--border-width) solid var(--foreground);
   cursor:
     url("cursor.png") 0 0,
     pointer;
@@ -841,6 +841,12 @@ a span {
 
 .contact-big p {
   margin: 0 0 16px;
+}
+
+.contact-big .contact-legal {
+  font-size: 24px;
+  line-height: 1.2;
+  margin-top: 8px;
 }
 
 .contact-row {
