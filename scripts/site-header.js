@@ -13,20 +13,6 @@
   var current = pathParts[0] || 'home';
 
   header.innerHTML =
-    '<button class="button-link nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">' +
-    '  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">' +
-    '    <g clip-path="url(#clip0_16_1807)">' +
-    '      <path d="M2.5 8H13.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-    '      <path d="M2.5 4H13.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-    '      <path d="M2.5 12H13.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-    '    </g>' +
-    '    <defs>' +
-    '      <clipPath id="clip0_16_1807">' +
-    '        <rect width="16" height="16" fill="white"/>' +
-    '      </clipPath>' +
-    '    </defs>' +
-    '  </svg>' +
-    '</button>' +
     '<a href="/" class="nav-logo-link">' +
     '  <svg class="nav-logo" width="1900" height="279" viewBox="0 0 1900 279" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Bernd Pastel" role="img">' +
     '    <path d="M560.517 40.6885V244.148H632.398V193.333L664.765 244.148H732.455V40.6885H660.574V91.5033L628.207 40.6885H560.517Z" fill="black"/>' +
@@ -42,6 +28,31 @@
     '    <path d="M1823.86 278.784C1872.5 278.784 1899.87 248.286 1899.87 203.32C1899.87 186.507 1896.08 172.431 1890.25 166.566L1889.57 170.085C1895.13 177.123 1897.84 186.507 1897.84 197.846C1897.84 233.819 1871.15 256.106 1825.62 256.106C1780.91 256.106 1749.07 234.601 1749.07 179.469C1749.07 77.0272 1859.36 109.871 1859.36 0.781993H1857.33C1857.33 87.1932 1747.04 63.3421 1747.04 186.898C1747.04 266.272 1792.7 278.784 1823.86 278.784Z" fill="black" stroke="black" stroke-width="0.5"/>' +
     '  </svg>' +
     '</a>' +
+    '<button class="button-link nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">' +
+    '  <svg class="nav-toggle-icon nav-toggle-open" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">' +
+    '    <g clip-path="url(#clip0_16_1807)">' +
+    '      <path d="M2.5 8H13.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '      <path d="M2.5 4H13.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '      <path d="M2.5 12H13.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '    </g>' +
+    '    <defs>' +
+    '      <clipPath id="clip0_16_1807">' +
+    '        <rect width="16" height="16" fill="white"/>' +
+    '      </clipPath>' +
+    '    </defs>' +
+    '  </svg>' +
+    '  <svg class="nav-toggle-icon nav-toggle-close" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">' +
+    '    <g clip-path="url(#clip0_19_10)">' +
+    '      <path d="M12.5 3.5L3.5 12.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '      <path d="M12.5 12.5L3.5 3.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '    </g>' +
+    '    <defs>' +
+    '      <clipPath id="clip0_19_10">' +
+    '        <rect width="16" height="16" fill="white"/>' +
+    '      </clipPath>' +
+    '    </defs>' +
+    '  </svg>' +
+    '</button>' +
     '<nav id="site-nav" class="site-nav">' +
     '  <a href="/prices/"><span data-lang="de">Preise</span><span data-lang="en" hidden>Prices</span></a>' +
     '  <a href="/location/"><span data-lang="de">Ort</span><span data-lang="en" hidden>Location</span></a>' +

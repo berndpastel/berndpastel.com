@@ -285,6 +285,7 @@ nav {
 
 nav a[aria-current="page"] {
   border-bottom-color: var(--foreground);
+  font-weight: 700;
 }
 
 .lang-toggle-group {
@@ -311,6 +312,22 @@ nav a[aria-current="page"] {
   font-family: inherit;
   color: var(--foreground);
   font-weight: 600;
+}
+
+.nav-toggle-icon {
+  display: block;
+}
+
+.nav-toggle-close {
+  display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-open {
+  display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-close {
+  display: block;
 }
 
 .nav-toggle:active {
