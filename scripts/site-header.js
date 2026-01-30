@@ -6,7 +6,11 @@
     return;
   }
 
-  var current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  // Get current page from path (e.g., /about/ -> about, / -> home)
+  var pathParts = location.pathname.split('/').filter(function(p) {
+    return p && p !== 'index.html';
+  });
+  var current = pathParts[0] || 'home';
 
   header.innerHTML =
     '<button class="button-link nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">' +
@@ -23,7 +27,7 @@
     '    </defs>' +
     '  </svg>' +
     '</button>' +
-    '<a href="index.html" class="nav-logo-link">' +
+    '<a href="/" class="nav-logo-link">' +
     '  <svg class="nav-logo" width="1900" height="279" viewBox="0 0 1900 279" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Bernd Pastel" role="img">' +
     '    <path d="M560.517 40.6885V244.148H632.398V193.333L664.765 244.148H732.455V40.6885H660.574V91.5033L628.207 40.6885H560.517Z" fill="black"/>' +
     '    <path d="M186.839 40.6885V244.148H358.777V174.837H271.848V158.692H319.289V107.171H271.848V93.9892H354.389V40.6885H186.839Z" fill="black"/>' +
@@ -39,20 +43,18 @@
     '  </svg>' +
     '</a>' +
     '<nav id="site-nav" class="site-nav">' +
-    '  <a href="prices.html"><span data-lang="de">Preise</span><span data-lang="en" hidden>Prices</span></a>' +
-    '  <a href="location.html"><span data-lang="de">Ort</span><span data-lang="en" hidden>Location</span></a>' +
-    '  <a href="contact.html"><span data-lang="de">Kontakt</span><span data-lang="en" hidden>Contact</span></a>' +
-    '  <a href="about.html"><span data-lang="de">Über mich</span><span data-lang="en" hidden>About</span></a>' +
-    '</nav>' +
-    '<div class="lang-toggle-group" role="group" aria-label="Language">' +
-    '  <button class="button-link lang-toggle" type="button" data-lang-toggle="de" aria-pressed="false">Deutsch</button>' +
-    '  <button class="button-link lang-toggle" type="button" data-lang-toggle="en" aria-pressed="false">English</button>' +
-    '</div>';
+    '  <a href="/prices/"><span data-lang="de">Preise</span><span data-lang="en" hidden>Prices</span></a>' +
+    '  <a href="/location/"><span data-lang="de">Ort</span><span data-lang="en" hidden>Location</span></a>' +
+    '  <a href="/contact/"><span data-lang="de">Kontakt</span><span data-lang="en" hidden>Contact</span></a>' +
+    '  <a href="/about/"><span data-lang="de">Über mich</span><span data-lang="en" hidden>About</span></a>' +
+    '</nav>';
   var links = header.querySelectorAll('nav a[href]');
   links.forEach(function (link) {
     var href = link.getAttribute('href');
     if (!href) return;
-    if (href.toLowerCase() === current) {
+    // Extract page name from href (e.g., /prices/ -> prices)
+    var linkPage = href.replace(/^\/|\/$/g, '') || 'home';
+    if (linkPage === current) {
       link.setAttribute('aria-current', 'page');
     }
   });

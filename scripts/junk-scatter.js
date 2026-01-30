@@ -51,8 +51,9 @@
     } else {
       cleaned = cleaned.slice(cleaned.indexOf('junk/'));
     }
-    if (cleaned.charAt(0) === '/') {
-      cleaned = cleaned.slice(1);
+    // Make path absolute so it works from subdirectories
+    if (cleaned.charAt(0) !== '/') {
+      cleaned = '/' + cleaned;
     }
     return cleaned;
   }
