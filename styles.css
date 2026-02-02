@@ -206,13 +206,22 @@ select {
 
 .home-hero {
   min-height: calc(100dvh - 200px);
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
   text-align: center;
 }
 
 .home-hero h1 {
-  font-size: 15vw;
+  font-size: 12vw;
+  margin: 0;
+}
+
+.home-subtitle {
+  margin: 0;
+  font-size: clamp(1rem, 2.4vw, 1.5rem);
 }
 
 .junk-scatter-layer {
@@ -1064,7 +1073,12 @@ footer {
 
 .cookie-reject {
   --btn-bg: linear-gradient(180deg, #fff3f0 0%, #ffd3c8 45%, #ffb3a3 100%);
-  --btn-bg-hover: linear-gradient(180deg, #fff7f4 0%, #ffdcd4 45%, #ffc0b3 100%);
+  --btn-bg-hover: linear-gradient(
+    180deg,
+    #fff7f4 0%,
+    #ffdcd4 45%,
+    #ffc0b3 100%
+  );
   --btn-bg-active: linear-gradient(180deg, #ffd1c6 0%, #ffad9d 100%);
   --btn-border: #7a3b2c;
   --btn-shadow:
