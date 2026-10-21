@@ -5,7 +5,21 @@
   var selectors = ['.service-carousel', '.about-carousel', '.price-guide-carousel'];
   var carousels = document.querySelectorAll(selectors.join(', '));
 
+  // Carousels with data-folder get their photos from nails-list.js.
+  var nailImages = window.NAIL_IMAGES || {};
+
   carousels.forEach(function (carousel) {
+    var folder = carousel.getAttribute('data-folder');
+    if (folder) {
+      var alt = carousel.getAttribute('data-alt') || '';
+      (nailImages[folder] || []).forEach(function (path, i) {
+        var img = document.createElement('img');
+        img.src = '/' + encodeURI(path);
+        img.alt = alt + ' ' + (i + 1);
+        carousel.appendChild(img);
+      });
+    }
+
     var imgs = Array.from(carousel.querySelectorAll('img'));
     if (!imgs.length) {
       return;
