@@ -15,7 +15,13 @@ window.NAIL_IMAGES = {
     "images/nails/level-1/level1-13.jpg",
     "images/nails/level-1/level1-14.jpg",
     "images/nails/level-1/level1-15.jpg",
-    "images/nails/level-1/level1-16.jpg"
+    "images/nails/level-1/level1-16.jpg",
+    "images/nails/level-1/level1-17.jpg",
+    "images/nails/level-1/level1-18.jpg",
+    "images/nails/level-1/level1-19.jpg",
+    "images/nails/level-1/level1-20.jpg",
+    "images/nails/level-1/level1-21.jpg",
+    "images/nails/level-1/level1-22.jpg"
   ],
   "level-2": [
     "images/nails/level-2/level2-1.jpg",
@@ -41,7 +47,12 @@ window.NAIL_IMAGES = {
     "images/nails/level-2/level2-21.jpg",
     "images/nails/level-2/level2-22.jpg",
     "images/nails/level-2/level2-23.jpg",
-    "images/nails/level-2/level2-24.jpg"
+    "images/nails/level-2/level2-24.jpg",
+    "images/nails/level-2/level2-25.jpg",
+    "images/nails/level-2/level2-26.jpg",
+    "images/nails/level-2/level2-27.jpg",
+    "images/nails/level-2/level2-28.jpg",
+    "images/nails/level-2/level2-29.jpg"
   ],
   "level-3": [
     "images/nails/level-3/level3-1.jpg",
@@ -69,11 +80,20 @@ window.NAIL_IMAGES = {
     "images/nails/level-3/level3-24.jpg",
     "images/nails/level-3/level3-25.jpg",
     "images/nails/level-3/level3-26.jpg",
-    "images/nails/level-3/level3-27.jpg"
+    "images/nails/level-3/level3-27.jpg",
+    "images/nails/level-3/level3-28.jpg",
+    "images/nails/level-3/level3-29.jpg",
+    "images/nails/level-3/level3-30.jpg",
+    "images/nails/level-3/level3-31.jpg",
+    "images/nails/level-3/level3-32.jpg",
+    "images/nails/level-3/level3-33.jpg",
+    "images/nails/level-3/level3-34.jpg",
+    "images/nails/level-3/level3-35.jpg"
   ],
   "one-color": [
     "images/nails/one-color/onecolor-1.jpg",
     "images/nails/one-color/onecolor-2.jpg",
-    "images/nails/one-color/onecolor-3.jpg"
+    "images/nails/one-color/onecolor-3.jpg",
+    "images/nails/one-color/onecolor-4.jpg"
   ]
 };
