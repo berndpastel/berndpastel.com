@@ -12,7 +12,10 @@ window.NAIL_IMAGES = {
     "images/nails/level-1/level1-10.jpg",
     "images/nails/level-1/level1-11.jpg",
     "images/nails/level-1/level1-12.jpg",
-    "images/nails/level-1/level1-13.jpg"
+    "images/nails/level-1/level1-13.jpg",
+    "images/nails/level-1/level1-14.jpg",
+    "images/nails/level-1/level1-15.jpg",
+    "images/nails/level-1/level1-16.jpg"
   ],
   "level-2": [
     "images/nails/level-2/level2-1.jpg",
@@ -71,7 +74,6 @@ window.NAIL_IMAGES = {
   "one-color": [
     "images/nails/one-color/onecolor-1.jpg",
     "images/nails/one-color/onecolor-2.jpg",
-    "images/nails/one-color/onecolor-3.jpg",
-    "images/nails/one-color/onecolor-4.jpg"
+    "images/nails/one-color/onecolor-3.jpg"
   ]
 };
