@@ -11,14 +11,10 @@
   var shigh = 600;
   var sleft = 0;
   var sdown = 0;
-  var tiny = [];
   var star = [];
   var starv = [];
   var starx = [];
   var stary = [];
-  var tinyx = [];
-  var tinyy = [];
-  var tinyv = [];
 
   var symbols = ["*", "✦", "✧", "✺", "✹", "✶", "✵", "⋆", "+", "✸", "✿", "❀", "♡"];
 
@@ -32,6 +28,7 @@
     span.style.fontFamily = "inherit";
     span.style.fontWeight = "700";
     span.style.color = colour;
+    span.style.textShadow = "none";
     span.style.zIndex = "2147483647";
     span.style.pointerEvents = "none";
     span.style.userSelect = "none";
@@ -74,8 +71,8 @@
   }
 
   function updateStar(i) {
+    starv[i] -= 1;
     if (starv[i]) {
-      starv[i] -= 1;
       stary[i] += 1 + Math.random() * 3;
       var starBase = parseFloat(star[i].dataset.size || "18");
       var starScale = Math.max(0.2, starv[i] / 50);
@@ -90,36 +87,7 @@
         return;
       }
     } else {
-      tinyv[i] = 50;
-      tiny[i].style.top = (tinyy[i] = stary[i]) + "px";
-      tiny[i].style.left = (tinyx[i] = starx[i]) + "px";
-      var tinySize = 10 + Math.random() * 10;
-      tiny[i].dataset.size = tinySize.toFixed(2);
-      tiny[i].style.fontSize = tinySize + "px";
-      tiny[i].textContent = createSymbol();
       star[i].style.visibility = "hidden";
-      tiny[i].style.visibility = "visible";
-    }
-  }
-
-  function updateTiny(i) {
-    if (tinyv[i]) {
-      tinyv[i] -= 1;
-      tinyy[i] += 1 + Math.random() * 3;
-      var tinyBase = parseFloat(tiny[i].dataset.size || "12");
-      var tinyScale = Math.max(0.2, tinyv[i] / 50);
-      tiny[i].style.fontSize = tinyBase * tinyScale + "px";
-      if (tinyy[i] < shigh + sdown) {
-        tiny[i].style.top = tinyy[i] + "px";
-        tinyx[i] += (i % 5 - 2) / 5;
-        tiny[i].style.left = tinyx[i] + "px";
-      } else {
-        tiny[i].style.visibility = "hidden";
-        tinyv[i] = 0;
-        return;
-      }
-    } else {
-      tiny[i].style.visibility = "hidden";
     }
   }
 
@@ -146,9 +114,6 @@
       if (starv[c]) {
         updateStar(c);
       }
-      if (tinyv[c]) {
-        updateTiny(c);
-      }
     }
     window.setTimeout(sparkle, 40);
   }
@@ -156,11 +121,7 @@
   function init() {
     var i;
     for (i = 0; i < sparkles; i += 1) {
-      var tinySpan = createSpan();
-      tinySpan.style.visibility = "hidden";
-      document.body.appendChild((tiny[i] = tinySpan));
       starv[i] = 0;
-      tinyv[i] = 0;
       var starSpan = createSpan();
       starSpan.style.visibility = "hidden";
       document.body.appendChild((star[i] = starSpan));
