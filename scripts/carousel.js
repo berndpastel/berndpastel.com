@@ -12,7 +12,15 @@
     var folder = carousel.getAttribute('data-folder');
     if (folder) {
       var alt = carousel.getAttribute('data-alt') || '';
-      (nailImages[folder] || []).forEach(function (path, i) {
+      // Shuffle so each page load starts on different photos.
+      var paths = (nailImages[folder] || []).slice();
+      for (var j = paths.length - 1; j > 0; j -= 1) {
+        var k = Math.floor(Math.random() * (j + 1));
+        var tmp = paths[j];
+        paths[j] = paths[k];
+        paths[k] = tmp;
+      }
+      paths.forEach(function (path, i) {
         var img = document.createElement('img');
         img.src = '/' + encodeURI(path);
         img.alt = alt + ' ' + (i + 1);
