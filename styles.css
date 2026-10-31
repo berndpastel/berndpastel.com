@@ -502,11 +502,17 @@ a span {
 }
 
 .vogue-logo {
-  height: 1.5em;
+  height: 1.15em;
   width: auto;
   display: inline-block;
   vertical-align: baseline;
   opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .vogue-logo {
+    height: 0.95em;
+  }
 }
 
 .location-content {
