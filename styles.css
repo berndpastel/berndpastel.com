@@ -478,18 +478,24 @@ a span {
 }
 
 .featured-in {
-  margin: 0.6em 0;
+  margin: 0.6em 0 0;
+  text-align: center;
 }
 
 .featured-in a {
   display: inline-flex;
   align-items: baseline;
-  gap: 0.6em;
+  gap: 0.5em;
   color: var(--foreground);
   text-decoration: none;
 }
 
-.featured-in a:hover .vogue-logo,
+.featured-in a:hover,
+.featured-in a:focus {
+  text-decoration: none;
+}
+
+.featured-in a:hover .vogue-wordmark,
 .featured-in a:hover .featured-in-label {
   opacity: 1;
 }
@@ -501,17 +507,19 @@ a span {
   opacity: 0.75;
 }
 
-.vogue-logo {
-  height: 1.15em;
-  width: auto;
-  display: inline-block;
-  vertical-align: baseline;
+.vogue-wordmark {
+  font-family: "Playfair Display", Didot, "Bodoni 72", "Times New Roman", serif;
+  font-weight: 900;
+  font-size: 1.3em;
+  letter-spacing: 0.01em;
+  line-height: 1;
   opacity: 0.9;
+  text-decoration: none;
 }
 
 @media (max-width: 600px) {
-  .vogue-logo {
-    height: 0.95em;
+  .vogue-wordmark {
+    font-size: 1.1em;
   }
 }
 
