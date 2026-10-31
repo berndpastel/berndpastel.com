@@ -481,11 +481,6 @@ a span {
   margin: 0.6em 0;
 }
 
-.about-name {
-  margin: 0 0 0.3em;
-  font-size: clamp(42px, 7vw, 64px);
-}
-
 .featured-in a {
   display: inline-flex;
   align-items: baseline;
