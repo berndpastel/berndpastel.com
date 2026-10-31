@@ -477,6 +477,38 @@ a span {
   }
 }
 
+.featured-in {
+  margin: 0.6em 0;
+}
+
+.featured-in a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.6em;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.featured-in a:hover .vogue-logo,
+.featured-in a:hover .featured-in-label {
+  opacity: 1;
+}
+
+.featured-in-label {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.78em;
+  opacity: 0.75;
+}
+
+.vogue-logo {
+  height: 1.5em;
+  width: auto;
+  display: inline-block;
+  vertical-align: baseline;
+  opacity: 0.9;
+}
+
 .location-content {
   min-height: calc(100dvh - 200px);
   display: flex;
